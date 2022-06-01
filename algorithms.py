@@ -37,7 +37,7 @@ def algo_disj(obs_util, grps, k, m): # lat_util = None):
 
     obs_util_grp_a = copy.deepcopy(obs_util)
     for i in grps[1]: obs_util_grp_a[i] *= 0
-    sol_tmp = baseline_greedy_uncons(obs_util_grp_a, grps, k * len(grps[0]) // n, m, pr=False)
+    sol_tmp = baseline_uncons(obs_util_grp_a, grps, k * len(grps[0]) // n, m, pr=False)
     k_pr = count_sol_in_attr(sol_tmp, obs_util)
 
     ####################################
